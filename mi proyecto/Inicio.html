@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Instituto Patria</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* BANNER */
+        .banner {
+            height: 300px; /* Reducido para móviles */
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../mi proyecto/imagenes/civicos.jpeg");
+            background-size: cover;
+            background-position: center; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .banner h1 {
+            font-size: 1.5rem;
+            padding: 0 10px;
+        }
+
+        /* MENÚ NAVEGACIÓN */
+        .nav-container {
+            background: #111;
+            padding: 10px;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los botones bajen si no caben */
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            background: #333;
+            border-radius: 5px;
+            font-size: 14px;
+            flex: 1 1 140px; /* Tamaño mínimo para botones en móvil */
+            text-align: center;
+        }
+
+        /* CARRUSEL RESPONSIVO */
+        .carrusel {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: deslizar 12s infinite;
+        }
+
+        .slides img {
+            width: 100%; /* Importante: ocupa el ancho del contenedor */
+            height: 250px; /* Altura fija para móvil */
+            object-fit: cover;
+        }
+
+        /* SECCIÓN INTRODUCCIÓN */
+        section {
+            padding: 30px 20px;
+            background: white;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #0b2c5f;
+            text-align: center;
+        }
+
+        .linea {
+            width: 60px;
+            height: 4px;
+            background: #f4b400;
+            margin: 10px auto 20px;
+        }
+
+        /* IMÁGENES Y FOOTER */
+        .imagen-destacada img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* ANIMACIÓN */
+        @keyframes deslizar {
+            0% { transform: translateX(0); }
+            30% { transform: translateX(0); }
+            33% { transform: translateX(-33.33%); }
+            63% { transform: translateX(-33.33%); }
+            66% { transform: translateX(-66.66%); }
+            96% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* AJUSTES PARA PANTALLAS GRANDES */
+        @media(min-width: 768px) {
+            .banner { height: 500px; }
+            .banner h1 { font-size: 3rem; }
+            .slides img { height: 500px; }
+            .menu a { flex: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <h1>CENTRO EDUCACIÓN MEDIA GUBERNAMENTAL<br>PATRIA<br>LA LIMA</h1>
+    </div>
+
+    <div class="nav-container">
+        <nav class="menu">
+            <a href="../mi proyecto/index.html">INICIO</a>
+            <a href="#introduccion">INTRODUCCIÓN</a>
+            <a href="../mi proyecto/carreras/informatica.html">INFORMÁTICA</a>
+            <a href="../mi proyecto/carreras/cf.html">CONTADURÍA</a> 
+            <a href="../mi proyecto/carreras/merca.html">MERCADOTECNIA</a>
+            <a href="../mi proyecto/carreras/aeb.html">ASISTENTE E. BILINGÜE</a>
+            <a href="../mi proyecto/carreras/CN.html">CIENCIA Y HUMANIDADES</a>
+        </nav>
+    </div>
+
+    <div class="carrusel">
+        <div class="slides">
+            <img src="../mi proyecto/imagenes/info.jpeg" alt="Recreo">
+            <img src="../mi proyecto/imagenes/CH6.png" alt="Guerra">
+            <img src="../mi proyecto/imagenes/civic.jpg" alt="Cívica">
+        </div>
+    </div>
+
+    <section id="introduccion">
+        <h2>INTRODUCCIÓN</h2>
+        <div class="linea"></div>
+        <p>El Instituto Patria es una institución educativa comprometida con la formación integral de jóvenes, brindando una educación de calidad basada en conocimientos académicos, desarrollo técnico y valores humanos.</p>
+        <p>A través de su oferta académica, el instituto promueve el aprendizaje significativo, permitiendo a los estudiantes desarrollar habilidades para el ámbito laboral o estudios superiores.</p>
+        
+        <div class="imagen-destacada">
+            <img src="../mi proyecto/imagenes/independencia.jpg" alt="Independencia">
+        </div>
+    </section>
+
+    <footer>
+        <h3>Contáctanos</h3>
+        <p>Tel: 9625-0640</p>
+        <p>HENRRY JOSUE OLIVA SANTOS</p>
+        <p>&copy; 2024 Mi Sitio Web Educativo</p>
+    </footer>
+
+</body>
+</html>
